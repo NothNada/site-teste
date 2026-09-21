@@ -1,32 +1,34 @@
 import Cima from './componentes/cima/Cima';
 import Baixo1 from './componentes/baixo1/Baixo1';
+import Localizacao from './componentes/localizacao/Localizacao';
 import Baixo2 from './componentes/baixo2/Baixo2';
+import Rodape from './componentes/rodape/Rodape';
 import Trecos from './componentes/trecos/Trecos';
 
 import './App.css';
 
 function App() {
-  const movel = window.innerWidth < 900;
-
   return (
     <>
-      <Cima movel={movel} />
-      <Baixo1 movel={movel}>
-        <h1 id="sobre">Seja Bem-Vindo</h1>
+      <Cima />
+      <Baixo1 id="sobre" titulo="Seja Bem-Vindo">
         <p>
-          À clinica Podologia & Saúde irá cuidar dos seus pés com muito cuidado e sem dores
+          A Podologia &amp; Saúde Mooca é especializada em tratamentos podológicos para todas as
+          idades — do público infantil à terceira idade. Atendimento cuidadoso, sem dor e com
+          agendamento prévio.
         </p>
+        <a className="cta" href="https://wa.me/5511984055827" target="_blank" rel="noreferrer">
+          Agendar pelo WhatsApp
+        </a>
       </Baixo1>
 
-      <Trecos movel={movel} />
+      <Trecos />
 
-      <Baixo2 movel={movel}>
-        <h1 id="cont">Contatos</h1>
-        <img src="imgs/zapzap.png" alt="zapzap icon" />
-        <p>+55 (11) 98405-5827</p>
-        <img src="imgs/tel.png" alt="telefone icon" />
-        <p>+55 (11) 98405-5827</p>
-      </Baixo2>
+      <Localizacao />
+
+      <Baixo2 id="cont" />
+
+      <Rodape />
     </>
   );
 }

@@ -3,7 +3,7 @@ import { useState } from 'react';
 import './trecos.css';
 
 type TrecosProps = {
-  movel: boolean;
+  id?: string;
 };
 
 const ops = [
@@ -16,7 +16,7 @@ const ops = [
   'Verruga Plantar',
   'Tungíase',
   'Bromidrose',
-  'Ortoníquea',
+  'Ortonixia',
 ];
 
 const txtins = [
@@ -24,7 +24,7 @@ const txtins = [
     <div>
       <h3>Unha Encravada e Infeccionada</h3>
       <p>
-        A onicocriptose é popularmente conhecida como unha encravada. Caracteriza-se com a presença de uma
+        A onicocriptose é popularmente conhecida como unha encravada. Caracteriza-se pela presença de uma
         espícula que tem o seu crescimento para dentro dos tecidos em volta da unha. Causa dor e grande
         incômodo ao usar calçados fechados. Pode ser lateral ou bilateral (em um único canto ou nos dois
         cantos da unha). O encravamento espicular produz um estado distrófico que implica alteração do
@@ -32,18 +32,18 @@ const txtins = [
         quatro grupos:
       </p>
       <p>
-        Onicocriptose grau I - Com a presença de espícula
+        Onicocriptose grau I - Com a presença de espícula.
         <br />
-        Onicocriptose grau II - Apresenta infecção
+        Onicocriptose grau II - Apresenta infecção.
         <br />
-        Onicocriptose grau III - Com granuloma
+        Onicocriptose grau III - Com granuloma.
         <br />
-        Onicocriptose grau IV - Com granuloma piogênico
+        Onicocriptose grau IV - Com granuloma piogênico.
         <br />
-        Duração do Tratamento: Em mãos habilidosas o procedimento de espiculaectomia dura bem menos de 1
+        Duração do Tratamento: em mãos habilidosas, o procedimento de espiculaectomia dura bem menos de 1
         hora.
         <br />
-        Técnica Podológica : O podólogo realizará a espiculaectomia (procedimento de retirada da espícula),
+        Técnica Podológica: O podólogo realizará a espiculaectomia (procedimento de retirada da espícula),
         fará toda a antissepsia necessária e o curativo oclusivo.
         <br />
         Recomendações: Recomenda-se ficar com o curativo e não molhar, retornar após 48hs para retirada do
@@ -64,17 +64,17 @@ const txtins = [
         calçados fechados.
       </p>
       <p>
-        Duração do Tratamento
+        Duração do Tratamento:
         <br />
         É um tratamento de longa duração e deve seguir as indicações terapêuticas e higiênicas indicadas.
         <br />
-        Técnica Podológica
+        Técnica Podológica:
         <br />
-        O podólogo realizará a preparação prévia da unha. Se realizará um arraste dos tecidos afetados. Se
-        procederá ao corte da unha afetada ou o desbaste com fresa. Necessário o tratamento com fitoterápico
+        O podólogo realizará a preparação prévia da unha. Será realizado um arraste dos tecidos afetados.
+        Será feito o corte da unha afetada ou o desbaste com fresa. Necessário o tratamento com fitoterápico
         adequado.
         <br />
-        Recomendações
+        Recomendações:
         <br />
         Recomenda-se a desinfecção do calçado e meia já que devido às sujidades que se depositam nos mesmos,
         podem servir de cultivo dos fungos.
@@ -119,11 +119,11 @@ const txtins = [
         que pode adotar diferente forma. Por ex. para acima em forma de corno, para abaixo em forma de
         garra ou também lateralmente. Isto vai depender muitas vezes do calçado, da posição dos dedos e
         também da permanência do paciente em cama ou por falta de atenção. Apresenta estrias transversais,
-        uma coloração cinza, marron ou amarelada, também pode apresentar manchas marcadas, com presença de
+        uma coloração cinza, marrom ou amarelada, também pode apresentar manchas marcadas, com presença de
         deformação
       </p>
       <p>
-        É constatada freqüentemente no indivíduo idoso. Na onicogrifose, ocorre espessamento de uma ou mais
+        É mais frequente em pessoas idosas. Na onicogrifose, ocorre espessamento de uma ou mais
         unhas e pela falta de cuidados, aumenta sua extensão e as unhas curvam-se como o chifre de um
         carneiro.
       </p>
@@ -135,14 +135,14 @@ const txtins = [
       <p>
         Fissuras são rachaduras que acometem os pés e o principal motivo é devido a falta de hidratação na
         pele. Seu aparecimento pode ocorrer por vários motivos, tais como: defeitos ortopédicos,
-        hereditariedade, alterações climáticas, conseqüência de psoríase, diabetes, doenças vasculares,
+        hereditariedade, alterações climáticas, consequência de psoríase, diabetes, doenças vasculares,
         micose, agressões químicas, andar descalço e uso de calçados abertos nos calcanhares, etc.
       </p>
       <p>
         Técnica Podológica:
         <br />
         O tratamento podológico para este caso consiste em desbaste do local, caso haja necessidade,
-        lixamento e hidratação. Aqui no Hospital dos Pés utilizamos a parafina como método de tratamento de
+        lixamento e hidratação. Aqui na clínica, utilizamos a parafina como método de tratamento de
         fissuras. Trata-se de uma hidratação profunda, que ativa a circulação trazendo bem-estar,
         relaxamento e conforto ao pisar.
         <br />
@@ -165,7 +165,7 @@ const txtins = [
         toque e arredondados. Em seu centro pode ou não formar-se um pequeno núcleo. As calosidades são
         espessamentos da pele. Podem surgir em qualquer parte do corpo que esteja sob constante pressão. Nos
         pés são frequentes nas regiões do calcanhar e metatarso. Os calos ou calosidades apresentam três
-        formas clinicas distintas: helomas, tilomas e hiperqueratoses.
+        formas clínicas distintas: helomas, tilomas e hiperqueratoses.
       </p>
       <p>
         Técnica Podológica:
@@ -278,34 +278,28 @@ const txtins = [
   ),
 ];
 
-export default function Trecos({ movel }: TrecosProps) {
+export default function Trecos({ id = 'tratamentos' }: TrecosProps) {
   const [sindex, setSindex] = useState(0);
 
-  const cliquei = (i: number) => {
-    setSindex(i);
-  };
-
-  const bota = () => {
-    return ops.map((value, index) => (
-      <a key={index} className={sindex === index ? 'selected' : ''} onClick={() => cliquei(index)}>
-        {value}
-      </a>
-    ));
-  };
-
-  if (movel) {
-    return (
-      <div className="tudoCel">
-        <div className="opcoesCel">{bota()}</div>
-        <div className="viewCel">{txtins[sindex]}</div>
-      </div>
-    );
-  }
-
   return (
-    <div className="tudo">
-      <div className="opcoes">{bota()}</div>
-      <div className="view">{txtins[sindex]}</div>
+    <div className="tudo" id={id}>
+      <div className="opcoes" role="tablist" aria-label="Tipos de tratamento">
+        {ops.map((value, index) => (
+          <button
+            key={index}
+            type="button"
+            role="tab"
+            aria-selected={sindex === index}
+            className={sindex === index ? 'selected' : ''}
+            onClick={() => setSindex(index)}
+          >
+            {value}
+          </button>
+        ))}
+      </div>
+      <div className="view" role="tabpanel">
+        {txtins[sindex]}
+      </div>
     </div>
   );
 }

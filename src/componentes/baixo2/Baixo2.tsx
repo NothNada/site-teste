@@ -1,48 +1,27 @@
-import { Children } from 'react';
-import type { ReactNode } from 'react';
-
 import './baixo2.css';
 
 type Baixo2Props = {
-  movel: boolean;
-  children: ReactNode;
+  id: string;
 };
 
-export default function Baixo2({ movel, children }: Baixo2Props) {
-  const [titulo, img1, txt1, img2, txt2] = Children.toArray(children);
-
-  if (movel) {
-    return (
-      <div className="textosCel2">
-        <div className="TextoCabecaCel2">{titulo}</div>
-        <div className="textinCel2">
-          <div className="textoComImgCel">
-            {img1}
-            <div className="txtImgCel">{txt1}</div>
-          </div>
-
-          <div className="textoComImgCel">
-            {img2}
-            <div className="txtImgCel">{txt2}</div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+export default function Baixo2({ id }: Baixo2Props) {
+  const telefone = '+55 (11) 98405-5827';
 
   return (
-    <div className="textos2">
-      <div className="TextoCabeca2">{titulo}</div>
+    <div className="textos2" id={id}>
+      <div className="cabeca2">
+        <h1>Contatos</h1>
+      </div>
       <div className="textin2">
-        <div className="textoComImg">
-          {img1}
-          <div className="txtImg">{txt1}</div>
-        </div>
+        <a className="contato" href="https://wa.me/5511984055827" target="_blank" rel="noreferrer">
+          <img src="imgs/zapzap.png" alt="WhatsApp" />
+          <span>{telefone}</span>
+        </a>
 
-        <div className="textoComImg">
-          {img2}
-          <div className="txtImg">{txt2}</div>
-        </div>
+        <a className="contato" href="tel:+5511984055827">
+          <img src="imgs/tel.png" alt="Telefone" />
+          <span>{telefone}</span>
+        </a>
       </div>
     </div>
   );
