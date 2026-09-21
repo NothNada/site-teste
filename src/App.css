@@ -1,28 +1,48 @@
 @import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
 
-:root{
-  --var-fundoBody1:rgb(241, 255, 214);
-  --var-fundoBody2:rgb(227, 255, 174);
+:root {
+  --var-fundoBody1: rgb(241, 255, 214);
+  --var-fundoBody2: rgb(227, 255, 174);
 }
 
-@keyframes gradient {
-  0% {
-      background-color: var(--var-fundoBody1);
-  }
-  50% {
-      background-color: var(--var-fundoBody2);
-  }
-  100% {
-      background-color: var(--var-fundoBody1);
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  animation: gradient 5s ease infinite;
-  color: #000;
+  margin: 0;
+  height: 100%;
   font-family: 'Paprika', serif;
   font-weight: 400;
   font-style: normal;
-  margin: 0;
-  height: 100vh;
+  color: #000;
+
+  background: linear-gradient(
+    120deg,
+    var(--var-fundoBody1),
+    var(--var-fundoBody2),
+    var(--var-fundoBody1)
+  );
+  background-size: 400% 400%;
+  animation: gradient 14s ease infinite;
+}
+
+@keyframes gradient {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  body {
+    animation: none;
+    background: var(--var-fundoBody2);
+  }
 }

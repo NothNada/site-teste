@@ -1,31 +1,20 @@
-import { Children } from 'react';
 import type { ReactNode } from 'react';
 
 import './baixo1.css';
 
 type Baixo1Props = {
-  movel: boolean;
+  id: string;
+  titulo: string;
   children: ReactNode;
 };
 
-export default function Baixo1({ movel, children }: Baixo1Props) {
-  const [titulo, texto] = Children.toArray(children);
-
-  if (movel) {
-    return (
-      <div>
-        <div className="textosCel">
-          <div className="TextoCabecaCel">{titulo}</div>
-          <div className="textinCel">{texto}</div>
-        </div>
-      </div>
-    );
-  }
-
+export default function Baixo1({ id, titulo, children }: Baixo1Props) {
   return (
     <div className="textos">
-      <div className="TextoCabeca">{titulo}</div>
-      <div className="textin">{texto}</div>
+      <div className="TextoCabeca">
+        <h1 id={id}>{titulo}</h1>
+      </div>
+      <div className="textin">{children}</div>
     </div>
   );
 }
