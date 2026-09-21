@@ -1,5 +1,5 @@
 :root {
-  --var-fundoNav: rgb(238, 255, 211);
+  --var-fundoNav: var(--cor-superficie);
 }
 
 #navBar {
@@ -15,12 +15,13 @@
   align-items: center;
 
   border-radius: 24px;
-  border: #000 solid 2px;
+  border: 1px solid var(--cor-borda);
   margin-top: 10px;
   width: min(90%, 960px);
   padding-right: 24px;
 
   background-color: var(--var-fundoNav);
+  box-shadow: 0 8px 20px rgb(11 44 59 / 6%);
 }
 
 .cima img {
@@ -34,7 +35,7 @@
 
 .btns button {
   font-size: 17px;
-  color: #000;
+  color: var(--cor-azul-petroleo);
   background: none;
   border: none;
   font-family: inherit;
@@ -42,7 +43,7 @@
 }
 .btns button:hover {
   cursor: pointer;
-  color: #2e7d32;
+  color: var(--cor-teal);
 }
 
 .btnsCel {
@@ -54,7 +55,7 @@
   align-items: center;
   gap: 8px;
   background: none;
-  border: none;
+  border: 1px solid transparent;
 }
 .btnsCel:hover {
   cursor: pointer;
@@ -64,7 +65,7 @@
   position: relative;
   height: 4px;
   width: 80%;
-  background-color: #000;
+  background-color: var(--cor-azul-petroleo);
   border-radius: 10px;
 }
 
@@ -80,13 +81,14 @@
 
   border-bottom-left-radius: 24px;
   border-bottom-right-radius: 24px;
-  border-left: #000 solid 2px;
-  border-right: #000 solid 2px;
-  border-bottom: #000 solid 2px;
+  border-left: 1px solid var(--cor-borda);
+  border-right: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+  box-shadow: 0 8px 20px rgb(11 44 59 / 6%);
 }
 
 .options button {
-  color: #000;
+  color: var(--cor-azul-petroleo);
   text-align: center;
   font-size: 16px;
   width: 90%;
@@ -97,7 +99,7 @@
 }
 .options button:hover {
   cursor: pointer;
-  color: #2e7d32;
+  color: var(--cor-teal);
 }
 
 @media (max-width: 900px) {

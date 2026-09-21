@@ -9,27 +9,39 @@ import './App.css';
 
 function App() {
   return (
-    <>
-      <Cima />
-      <Baixo1 id="sobre" titulo="Seja Bem-Vindo">
-        <p>
-          A Podologia &amp; Saúde Mooca é especializada em tratamentos podológicos para todas as
-          idades — do público infantil à terceira idade. Atendimento cuidadoso, sem dor e com
-          agendamento prévio.
-        </p>
-        <a className="cta" href="https://wa.me/5511984055827" target="_blank" rel="noreferrer">
-          Agendar pelo WhatsApp
-        </a>
-      </Baixo1>
+    <div className="site-shell">
+      <div className="page-background" aria-hidden="true">
+        <span className="page-circle page-circle-one" />
+        <span className="page-circle page-circle-two" />
+        <span className="page-circle page-circle-three" />
+        <span className="page-circle page-circle-four" />
+        <span className="page-circle page-circle-five" />
+      </div>
 
-      <Trecos />
+      <div className="site-content">
+        <Cima />
+        <main>
+          <Baixo1 id="sobre" titulo="Cuidado especializado para caminhar melhor">
+            <p>
+              A Podologia &amp; Saúde Mooca é especializada em tratamentos podológicos para todas as
+              idades — do público infantil à terceira idade. Atendimento cuidadoso, sem dor e com
+              agendamento prévio.
+            </p>
+            <a className="cta" href="https://wa.me/5511984055827" target="_blank" rel="noreferrer">
+              Agendar pelo WhatsApp
+            </a>
+          </Baixo1>
 
-      <Localizacao />
+          <Trecos />
 
-      <Baixo2 id="cont" />
+          <Localizacao />
 
-      <Rodape />
-    </>
+          <Baixo2 id="cont" />
+        </main>
+
+        <Rodape />
+      </div>
+    </div>
   );
 }
 

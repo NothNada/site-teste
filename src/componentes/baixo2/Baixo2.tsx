@@ -8,9 +8,9 @@ export default function Baixo2({ id }: Baixo2Props) {
   const telefone = '+55 (11) 98405-5827';
 
   return (
-    <div className="textos2" id={id}>
+    <section className="textos2" id={id}>
       <div className="cabeca2">
-        <h1>Contatos</h1>
+        <h2>Contatos</h2>
       </div>
       <div className="textin2">
         <a className="contato" href="https://wa.me/5511984055827" target="_blank" rel="noreferrer">
@@ -23,6 +23,6 @@ export default function Baixo2({ id }: Baixo2Props) {
           <span>{telefone}</span>
         </a>
       </div>
-    </div>
+    </section>
   );
 }

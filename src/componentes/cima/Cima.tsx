@@ -18,10 +18,10 @@ export default function Cima() {
   };
 
   return (
-    <div id="navBar">
+    <header id="navBar">
       <div className="cima">
         <img src="logo.png" alt="Logo Podologia e Saúde Mooca" width={180} />
-        <nav className="btns">
+        <nav className="btns" aria-label="Navegação principal">
           {options.map((op) => (
             <button key={op.destino} type="button" onClick={() => vai(op.destino)}>
               {op.label}
@@ -31,8 +31,9 @@ export default function Cima() {
         <button
           type="button"
           className="btnsCel"
-          aria-label="Abrir menu"
+          aria-label={aberto ? 'Fechar menu' : 'Abrir menu'}
           aria-expanded={aberto}
+          aria-controls="menu-mobile"
           onClick={() => setAberto(!aberto)}
         >
           <div className="treco" />
@@ -41,13 +42,18 @@ export default function Cima() {
         </button>
       </div>
 
-      <div className={`options${aberto ? ' aberto' : ''}`}>
+      <nav
+        id="menu-mobile"
+        className={`options${aberto ? ' aberto' : ''}`}
+        aria-label="Navegação mobile"
+        aria-hidden={!aberto}
+      >
         {options.map((op) => (
           <button key={op.destino} type="button" onClick={() => vai(op.destino)}>
             {op.label}
           </button>
         ))}
-      </div>
-    </div>
+      </nav>
+    </header>
   );
 }
