@@ -289,6 +289,8 @@ export default function Trecos({ id = 'tratamentos' }: TrecosProps) {
             key={index}
             type="button"
             role="tab"
+            id={`tratamento-tab-${index}`}
+            aria-controls="tratamento-panel"
             aria-selected={sindex === index}
             className={sindex === index ? 'selected' : ''}
             onClick={() => setSindex(index)}
@@ -297,7 +299,12 @@ export default function Trecos({ id = 'tratamentos' }: TrecosProps) {
           </button>
         ))}
       </div>
-      <div className="view" role="tabpanel">
+      <div
+        className="view"
+        id="tratamento-panel"
+        role="tabpanel"
+        aria-labelledby={`tratamento-tab-${sindex}`}
+      >
         {txtins[sindex]}
       </div>
     </div>

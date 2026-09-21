@@ -13,9 +13,9 @@ export default function Localizacao() {
   const enderecoCodific = encodeURIComponent(ENDERECO);
 
   return (
-    <div className="localizacao" id="local">
+    <section className="localizacao" id="local">
       <div className="cabecaLocal">
-        <h1>Localização</h1>
+        <h2>Localização</h2>
       </div>
 
       <div className="corpoLocal">
@@ -58,6 +58,6 @@ export default function Localizacao() {
           </p>
         </div>
       </div>
-    </div>
+    </section>
   );
 }

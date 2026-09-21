@@ -1,16 +1,16 @@
 :root {
-  --var-fundoLocal: rgb(214, 255, 138);
-  --var-fundoLocalTitulo: rgb(190, 255, 162);
-  --var-bordaLocal: rgb(90, 155, 62);
+  --var-fundoLocal: var(--cor-superficie);
+  --var-fundoLocalTitulo: var(--cor-superficie-verde);
 }
 
 .localizacao {
   position: relative;
   width: min(90vw, 960px);
-  justify-self: center;
+  margin-inline: auto;
   border-radius: 24px;
-  border: #000 solid 2px;
-  background-color: var(--var-fundoLocal);
+  border: 1px solid var(--cor-borda);
+  background-color: var(--cor-superficie);
+  box-shadow: 0 8px 24px rgb(11 44 59 / 6%);
   margin-top: 40px;
   margin-bottom: 40px;
   padding-bottom: 24px;
@@ -23,13 +23,13 @@
   transform: translateY(-50%);
 }
 
-.cabecaLocal h1 {
+.cabecaLocal h1,
+.cabecaLocal h2 {
   font-size: 26px;
   background-color: var(--var-fundoLocalTitulo);
   padding: 8px 20px;
   border-radius: 30px;
-  border-right: var(--var-bordaLocal) solid 3px;
-  border-bottom: var(--var-bordaLocal) solid 3px;
+  border: 1px solid var(--cor-teal);
   margin: 0;
 }
 
@@ -41,7 +41,7 @@
 }
 
 .bloco {
-  background-color: rgb(230, 255, 185);
+  background-color: var(--cor-superficie-verde);
   border-radius: 16px;
   padding: 16px 20px;
 }
@@ -57,7 +57,7 @@
 }
 
 .bloco a {
-  color: #1b5e20;
+  color: var(--cor-teal);
   font-size: 15px;
 }
 
@@ -65,10 +65,10 @@
   display: inline-block;
   margin-top: 8px;
   text-decoration: none;
-  border-bottom: 2px solid #2e7d32;
+  border-bottom: 1px solid var(--cor-teal);
 }
 .linkMaps:hover {
-  color: #2e7d32;
+  color: var(--cor-azul-petroleo);
 }
 
 .horarios {
@@ -83,7 +83,7 @@
   gap: 12px;
   font-size: 15px;
   padding: 5px 0;
-  border-bottom: 1px dashed rgb(150, 195, 100);
+  border-bottom: 1px dashed rgb(29 126 120 / 35%);
 }
 
 .horarios li:last-child {
@@ -95,7 +95,8 @@
     left: 16px;
   }
 
-  .cabecaLocal h1 {
+  .cabecaLocal h1,
+  .cabecaLocal h2 {
     font-size: 22px;
   }
 
