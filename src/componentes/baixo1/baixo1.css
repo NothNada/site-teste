@@ -1,0 +1,84 @@
+:root{
+  --var-fundoTextos:rgb(214, 255, 138);
+}
+
+.textos{
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  height: max-content;
+  justify-self: center;
+  border-radius: 30px;
+  border: #000 solid 2px;
+  background-color: var(--var-fundoTextos);
+  margin-top: 70px;
+  padding-bottom: 30px;
+}
+.TextoCabeca{
+  position: absolute;
+  transform: translateY(-50%);
+}
+.TextoCabeca h1{
+  font-size: 50px;
+  background-color: rgb(190, 255, 162);
+  padding: 10px;
+  border-radius: 40px;
+
+  border-right: rgb(90, 155, 62) solid 5px;
+  border-bottom: rgb(90, 155, 62) solid 5px;
+
+}
+
+.textin{
+  position: relative;
+  margin-top: 7%;
+  width: 100%;
+  text-align: center;
+}
+.textin p{
+  position: relative;
+  font-size: 35px;
+
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+
+.textosCel{
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  height: max-content;
+  justify-self: center;
+  border-radius: 30px;
+  border: #000 solid 2px;
+  background-color: var(--var-fundoTextos);
+  margin-top: 70px;
+  padding-bottom: 30px;
+}
+.TextoCabecaCel{
+  position: absolute;
+  transform: translateY(-50%);
+}
+.TextoCabecaCel h1{
+  font-size: 30px;
+  background-color: rgb(190, 255, 162);
+  padding: 10px;
+  border-radius: 40px;
+
+  border-right: rgb(90, 155, 62) solid 5px;
+  border-bottom: rgb(90, 155, 62) solid 5px;
+
+}
+
+.textinCel{
+  position: relative;
+  margin-top: 7%;
+  width: 100%;
+  text-align: center;
+  align-content: center;
+}
+.textinCel p{
+  position: relative;
+  font-size: 20px;
+}

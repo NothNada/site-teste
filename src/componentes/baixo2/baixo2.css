@@ -1,0 +1,111 @@
+:root{
+  --var-fundoTextos:rgb(214, 255, 138);
+}
+
+.textos2{
+  display: flex;
+  flex-direction: row;
+  width: 90vw;
+  height: max-content;
+  justify-self: center;
+  border-radius: 30px;
+  border: #000 solid 2px;
+  background-color: var(--var-fundoTextos);
+  margin-top: 70px;
+}
+.TextoCabeca2{
+  position: absolute;
+  transform: translateY(-50%);
+}
+.TextoCabeca2 h1{
+  font-size: 50px;
+  background-color: rgb(190, 255, 162);
+  padding: 10px;
+  border-radius: 40px;
+
+  border-right: rgb(90, 155, 62) solid 5px;
+  border-bottom: rgb(90, 155, 62) solid 5px;
+
+}
+
+.textin2{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 7%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding-left: 25px;
+  padding-right: 25px;
+  gap: 20px;
+}
+
+.textoComImg{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.textoComImg img{
+  height:80px;
+}
+
+.txtImg p{
+  font-size: 30px;
+}
+
+.textosCel2{
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  height: max-content;
+  justify-self: center;
+  border-radius: 30px;
+  border: #000 solid 2px;
+  background-color: var(--var-fundoTextos);
+  margin-top: 70px;
+  padding-bottom: 30px;
+}
+.TextoCabecaCel2{
+  position: absolute;
+  transform: translateY(-50%);
+}
+.TextoCabecaCel2 h1{
+  font-size: 30px;
+  background-color: rgb(190, 255, 162);
+  padding: 10px;
+  border-radius: 40px;
+
+  border-right: rgb(90, 155, 62) solid 5px;
+  border-bottom: rgb(90, 155, 62) solid 5px;
+
+}
+
+.textinCel2{
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-top: 7%;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+.textinCel2 p{
+  position: relative;
+  font-size: 20px;
+}
+
+.textoComImgCel{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.textoComImgCel img{
+  height:50px;
+}
+
+.txtImgCel p{
+  font-size: 25px;
+}

@@ -1,0 +1,82 @@
+:root{
+  --var-fundoOps:rgb(238, 255, 211);
+  --var-fundoSelected:rgb(198, 255, 107);
+}
+
+.tudo{
+  display: flex;
+  width: 80%;
+  height: max-content;
+  background-color: var(--var-fundoOps);
+  justify-self: center;
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: #000 solid 2px;
+  border-radius: 20px;
+}
+
+.opcoes{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-right: #000 solid 2px;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+.opcoes a{
+  text-align: center;
+  width: 100%;
+}
+.opcoes a:hover{
+  cursor: pointer;
+}
+
+.view{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.selected{
+  background-color: var(--var-fundoSelected);
+}
+
+.tudoCel{
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  height: max-content;
+  background-color: var(--var-fundoOps);
+  justify-self: center;
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+  border: #000 solid 2px;
+  border-radius: 20px;
+}
+
+.opcoesCel{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom: #000 solid 2px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding-bottom: 20px;
+}
+.opcoesCel a{
+  text-align: center;
+}
+.opcoesCel a:hover{
+  cursor: pointer;
+}
+
+.viewCel{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}

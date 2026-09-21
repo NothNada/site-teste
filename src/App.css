@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Paprika&display=swap');
+
+:root{
+  --var-fundoBody1:rgb(241, 255, 214);
+  --var-fundoBody2:rgb(227, 255, 174);
+}
+
+@keyframes gradient {
+  0% {
+      background-color: var(--var-fundoBody1);
+  }
+  50% {
+      background-color: var(--var-fundoBody2);
+  }
+  100% {
+      background-color: var(--var-fundoBody1);
+  }
+}
+
+body {
+  animation: gradient 5s ease infinite;
+  color: #000;
+  font-family: 'Paprika', serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+  height: 100vh;
+}
